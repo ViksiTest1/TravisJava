@@ -13,7 +13,7 @@ install: skip
 jobs:
   include:
     - name: failing
-      script: true
+      script: main.java
 
 after_success:
   - echo done
