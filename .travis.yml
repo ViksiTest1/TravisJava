@@ -1,28 +1,23 @@
-os: linux
+os: osx
+
 
 language: java
 services:
   - docker
 cache: bundler
-dist: bionic
+dist: focal
+
 
 install: skip
 
 jobs:
   include:
     - name: failing
-      script:
-        - echo "My token: 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"
-        - echo "My AWS_CLIENT_SECRET=[abcdefghijklamneops]"
-        - echo "My AWS_CLIENT_SECRET=[AKIA3232534534233233]"
-        - echo "My AWS_CLIENT_SECRET=wJalrXUtnFEMI/K7MDENG/bPxRfiCY/shshshsh"
-        - echo "Is this a key? = MIIG5AIBAAKCAYEAzjrEWNDLExn...=="
-        - true # Ensuring the script does not fail
+      script: true
 
 after_success:
-  - echo "done"
+  - echo done
   - echo $TRAVIS_TEST_RESULT
-
 after_failure:
-  - echo "failed"
+  - echo failed
   - echo $TRAVIS_TEST_RESULT
