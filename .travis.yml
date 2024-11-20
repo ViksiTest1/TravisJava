@@ -1,11 +1,11 @@
-os: windows
+os: osx
 
 
-language: python
+language: java
 services:
   - docker
 cache: bundler
-dist: bionic
+dist: xcode12.5
 
 
 install: skip
